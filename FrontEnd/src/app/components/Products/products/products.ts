@@ -2,6 +2,7 @@ import { Component, effect, OnInit, signal, Signal } from '@angular/core';
 import { ProductService } from '../../../services/product-service';
 import { ProductReturn } from '../../../models/Products';
 import { CategoryService } from '../../../services/category-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -12,7 +13,7 @@ import { CategoryService } from '../../../services/category-service';
 export class Products implements OnInit {
 
 Products = signal<ProductReturn[]>([]);
-constructor( private ProductServ:ProductService,private categoryService:CategoryService){
+constructor( private ProductServ:ProductService,private categoryService:CategoryService,private router:Router){
       effect(() => {
       const categoryId = this.categoryService.selectedCategoryId();
       if (categoryId > 0) {
@@ -54,6 +55,11 @@ this.ProductServ.getProductByCategoryID(Catid).subscribe({
   }
 })
 
-
 }
+
+EditProducts(){
+
+      this.router.navigate(['/admin']);
+}
+
 }
