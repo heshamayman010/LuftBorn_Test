@@ -35,6 +35,11 @@ export class ProductService {
     return this.http.delete<boolean>(`${this.productsAPIURL}/HardDelete?id=${productID}`);
   }
 
+      SoftdeleteProduct(productID: number): Observable<boolean> {
+    return this.http.delete<boolean>(`${this.productsAPIURL}?id=${productID}`);
+  }
+
+
   createProduct(newProductRequest: ProductAdd): Observable<ProductReturn> {
     return this.http.post<ProductReturn>(`${this.productsAPIURL}/add`, newProductRequest);
   }
