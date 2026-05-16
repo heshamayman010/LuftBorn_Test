@@ -9,7 +9,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Luftborn.Controllers
 {
-    [Authorize]
+
+    // to authorize all the apis of the system you can un comment this 
+    // [Authorize]
     public class BaseGenericApiController<TEntity, TAddDto, TReturnDto> : BaseController
         where TEntity : BaseEntity
         where TAddDto : BaseDto

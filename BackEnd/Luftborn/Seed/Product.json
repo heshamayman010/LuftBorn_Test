@@ -1,0 +1,142 @@
+[
+  {
+    "NameAr": "منتج الأول أ",
+    "NameEn": "First Category Product A",
+    "Price": 120.00,
+    "CategoryId": 1,
+    "BarCode": "PROD-1A-001"
+  },
+  {
+    "NameAr": "منتج الأول ب",
+    "NameEn": "First Category Product B",
+    "Price": 85.50,
+    "CategoryId": 1,
+    "BarCode": "PROD-1B-002"
+  },
+  {
+    "NameAr": "منتج الأول ج",
+    "NameEn": "First Category Product C",
+    "Price": 210.00,
+    "CategoryId": 1,
+    "BarCode": "PROD-1C-003"
+  },
+  {
+    "NameAr": "منتج الأول د",
+    "NameEn": "First Category Product D",
+    "Price": 45.00,
+    "CategoryId": 1,
+    "BarCode": "PROD-1D-004"
+  },
+  {
+    "NameAr": "منتج الثاني أ",
+    "NameEn": "Second Category Product A",
+    "Price": 340.00,
+    "CategoryId": 2,
+    "BarCode": "PROD-2A-005"
+  },
+  {
+    "NameAr": "منتج الثاني ب",
+    "NameEn": "Second Category Product B",
+    "Price": 150.00,
+    "CategoryId": 2,
+    "BarCode": "PROD-2B-006"
+  },
+  {
+    "NameAr": "منتج الثاني ج",
+    "NameEn": "Second Category Product C",
+    "Price": 99.99,
+    "CategoryId": 2,
+    "BarCode": "PROD-2C-007"
+  },
+  {
+    "NameAr": "منتج الثاني د",
+    "NameEn": "Second Category Product D",
+    "Price": 12.50,
+    "CategoryId": 2,
+    "BarCode": "PROD-2D-008"
+  },
+  {
+    "NameAr": "منتج الثالث أ",
+    "NameEn": "Third Category Product A",
+    "Price": 500.00,
+    "CategoryId": 3,
+    "BarCode": "PROD-3A-009"
+  },
+  {
+    "NameAr": "منتج الثالث ب",
+    "NameEn": "Third Category Product B",
+    "Price": 250.00,
+    "CategoryId": 3,
+    "BarCode": "PROD-3B-010"
+  },
+  {
+    "NameAr": "منتج الثالث ج",
+    "NameEn": "Third Category Product C",
+    "Price": 175.00,
+    "CategoryId": 3,
+    "BarCode": "PROD-3C-011"
+  },
+  {
+    "NameAr": "منتج الثالث د",
+    "NameEn": "Third Category Product D",
+    "Price": 60.00,
+    "CategoryId": 3,
+    "BarCode": "PROD-3D-012"
+  },
+  {
+    "NameAr": "منتج الرابع أ",
+    "NameEn": "Fourth Category Product A",
+    "Price": 450.00,
+    "CategoryId": 4,
+    "BarCode": "PROD-4A-013"
+  },
+  {
+    "NameAr": "منتج الرابع ب",
+    "NameEn": "Fourth Category Product B",
+    "Price": 300.00,
+    "CategoryId": 4,
+    "BarCode": "PROD-4B-014"
+  },
+  {
+    "NameAr": "منتج الرابع ج",
+    "NameEn": "Fourth Category Product C",
+    "Price": 115.00,
+    "CategoryId": 4,
+    "BarCode": "PROD-4C-015"
+  },
+  {
+    "NameAr": "منتج الرابع د",
+    "NameEn": "Fourth Category Product D",
+    "Price": 90.00,
+    "CategoryId": 4,
+    "BarCode": "PROD-4D-016"
+  },
+  {
+    "NameAr": "منتج الخامس أ",
+    "NameEn": "Fifth Category Product A",
+    "Price": 750.00,
+    "CategoryId": 5,
+    "BarCode": "PROD-5A-017"
+  },
+  {
+    "NameAr": "منتج الخامس ب",
+    "NameEn": "Fifth Category Product B",
+    "Price": 620.00,
+    "CategoryId": 5,
+    "BarCode": "PROD-5B-018"
+  },
+  {
+    "NameAr": "منتج الخامس ج",
+    "NameEn": "Fifth Category Product C",
+    "Price": 180.00,
+    "CategoryId": 5,
+    "BarCode": "PROD-5C-019"
+  },
+  {
+    "NameAr": "منتج الخامس د",
+    "NameEn": "Fifth Category Product D",
+    "Price": 35.00,
+    "CategoryId": 5,
+    "BarCode": "PROD-5D-020"
+  }
+]

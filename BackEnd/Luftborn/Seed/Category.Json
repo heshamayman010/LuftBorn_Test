@@ -1,0 +1,27 @@
+[
+  {
+    "NameAr": "الأول",
+    "NameEn": "First",
+    "code": 1
+  },
+  {
+    "NameAr": "الثاني",
+    "NameEn": "Second",
+    "code": 2
+  },
+  {
+    "NameAr": "الثالث",
+    "NameEn": "Third",
+    "code": 3
+  },
+  {
+    "NameAr": "الرابع",
+    "NameEn": "Fourth",
+    "code": 4
+  },
+  {
+    "NameAr": "الخامس",
+    "NameEn": "Fifth",
+    "code": 5
+  }
+]
