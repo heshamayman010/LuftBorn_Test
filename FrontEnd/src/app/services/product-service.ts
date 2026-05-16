@@ -32,7 +32,7 @@ export class ProductService {
   }
 
   deleteProduct(productID: number): Observable<boolean> {
-    return this.http.delete<boolean>(`${this.productsAPIURL}?id=${productID}`);
+    return this.http.delete<boolean>(`${this.productsAPIURL}/HardDelete?id=${productID}`);
   }
 
   createProduct(newProductRequest: ProductAdd): Observable<ProductReturn> {

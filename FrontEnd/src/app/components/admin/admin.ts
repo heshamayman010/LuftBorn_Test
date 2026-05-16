@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { AddProduct } from "../Products/add-product/add-product";
 import { AdminCategories } from './admin-categories/admin-categories';
 import { AdminProducts } from './admin-products/admin-products';
 import { Router } from '@angular/router';

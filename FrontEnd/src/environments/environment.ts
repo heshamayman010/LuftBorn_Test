@@ -1,26 +1,3 @@
-// export const environment = {
-
-
-//         production: false,
-//     productsAPIURL: 'http://localhost:5047/Product',
-//     CategoryApiUrl:'http://localhost:5047/Category'
-
-// };
-
-
-// export const b2c = {
-//   tenantName: 'HeshamEcommerce',
-//   clientId: 'c931645e-78a3-47aa-ac35-fdf05e1b3478',
-//   apiInstanceName: 'harsha-ecommerce-api3'
-// };
-// const localApiUrl = 'http://localhost:5047/';
-
-// export const environment = {
-
-//     production: false,
-//     productsAPIURL: 'http://localhost:5047/Product',
-//     CategoryApiUrl:'http://localhost:5047/Category'
-// };
 
 const localApiUrl = 'http://localhost:5047';
 

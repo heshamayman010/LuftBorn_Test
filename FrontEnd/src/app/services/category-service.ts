@@ -32,7 +32,7 @@ selectedCategoryId = signal<number>(0);
   }
 
   deleteCategory(cateId: number): Observable<boolean> {
-    return this.http.delete<boolean>(`${this.categoryAPIURL}?id=${cateId}`);
+    return this.http.delete<boolean>(`${this.categoryAPIURL}/HardDelete?id=${cateId}`);
   }
 
   createCategory(newCategory: Category): Observable<Category> {
