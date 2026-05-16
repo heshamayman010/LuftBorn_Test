@@ -1,0 +1,43 @@
+<div class="container-fluid p-0">
+  <div class="row g-0">
+    <!-- Sidebar -->
+    <div class="col-auto bg-dark text-white vh-100" style="width: 280px;">
+      <div class="d-flex flex-column h-100">
+        <!-- Header -->
+        <div class="p-3 border-bottom border-secondary">
+          <h4 class="text-white mb-0">Categories</h4>
+        </div>
+
+        <!-- Categories List -->
+        <div class="flex-grow-1 overflow-auto p-2">
+          <div class="list-group list-group-flush bg-dark">
+            
+            <button 
+                class="list-group-item list-group-item-action bg-dark text-white border-secondary"
+                [class.active]="selectedCategoryId === 0"
+                (click)="selectCategory(0)">
+                All Categories
+              </button>
+
+            @for (category of categories(); track category.id) {
+              <button 
+                class="list-group-item list-group-item-action bg-dark text-white border-secondary"
+                [class.active]="selectedCategoryId === category.id"
+                (click)="selectCategory(category.id)">
+                {{ category.nameAr }}
+              </button>
+            }
+
+          </div>
+        </div>
+
+
+        <!-- Footer -->
+        <div class="p-3 border-top border-secondary text-center small">
+          &copy; LUFTBORN
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+      background-color: #f2f2f3;
+
+}
+
+.categories-sidebar {
+  width: 250px;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.products-main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.products-content {
+  padding: 16px;
+    background-color: #f2f2f3;
+
+}

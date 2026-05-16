@@ -1,0 +1,31 @@
+.home-button-container {
+  margin-top: 30px;
+  text-align: center;
+  
+  .btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+  }
+}
+
+// Utility Classes
+.text-center {
+  text-align: center;
+}
+
+
+.text-muted {
+  color: #6c757d;
+}
+
+.text-white {
+  color: white;
+}
+
+.small {
+  font-size: 0.875em;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
