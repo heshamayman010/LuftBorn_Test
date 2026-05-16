@@ -5,9 +5,11 @@ using Luftborn.UnitofWorkF;
 using Microsoft.AspNetCore.Mvc;
 using Luftborn.Entities;
 using Luftborn.Dtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Luftborn.Controllers
 {
+    [Authorize]
     public class BaseGenericApiController<TEntity, TAddDto, TReturnDto> : BaseController
         where TEntity : BaseEntity
         where TAddDto : BaseDto

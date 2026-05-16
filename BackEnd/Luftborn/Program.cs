@@ -4,6 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.addApplicationService(builder.Configuration);
+builder.Services.AuthenticationServices(builder.Configuration);
+builder.Services.AddSwaggerDocumentation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();

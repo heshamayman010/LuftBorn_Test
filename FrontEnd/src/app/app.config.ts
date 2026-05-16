@@ -1,19 +1,8 @@
-// import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-// import { provideRouter } from '@angular/router';
-
-// import { routes } from './app.routes';
-
-// export const appConfig: ApplicationConfig = {
-//   providers: [
-//     provideBrowserGlobalErrorListeners(),
-//     provideRouter(routes)
-//   ]
-// };
 import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, withHashLocation } from '@angular/router';
 import { routes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
-import { provideHttpClient, withInterceptorsFromDi, HTTP_INTERCEPTORS, withFetch } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, HTTP_INTERCEPTORS } from '@angular/common/http'; 
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 import {
@@ -42,13 +31,12 @@ export function loggerCallback(logLevel: LogLevel, message: string) {
   console.log(message);
 }
 
-// 1. Initialize MSAL configuration using your Entra External ID endpoints
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
       clientId: environment.config.adb2cConfig.clientId,
       authority: environment.config.adb2cConfig.authorityDomain, 
-knownAuthorities: ['HeshamEcommerce.ciamlogin.com'],
+      knownAuthorities: ['HeshamEcommerce.ciamlogin.com'],
       redirectUri: 'https://localhost:4200', 
       postLogoutRedirectUri: 'https://localhost:4200',
     },
@@ -66,7 +54,8 @@ knownAuthorities: ['HeshamEcommerce.ciamlogin.com'],
   });
 }
 
-// 2. Map your /Product and /Category backend routes so MSAL knows when to attach tokens
+
+// 2. Map backend routes so MSAL knows when to attach tokens
 export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
   const protectedResourceMap = new Map<string, Array<string>>();
   
@@ -80,10 +69,11 @@ export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
   return {
     interactionType: InteractionType.Redirect,
     protectedResourceMap,
+    strictMatching: false 
   };
 }
 
-// 3. Configure the Guard parameters to lock down routes if the user isn't logged in
+//  Configure the Guard parameters to lock down routes if the user isnt logged in
 export function MSALGuardConfigFactory(): MsalGuardConfiguration {
   return {
     interactionType: InteractionType.Redirect,
@@ -100,12 +90,12 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withHashLocation()),
     provideAnimations(),
     
-    // Explicitly configures Angular to use standard DI Interceptors for MSAL
-    provideHttpClient(withInterceptorsFromDi(), withFetch()),
+    //Keep only withInterceptorsFromDi() and DO NOT add withFetch() here
+    provideHttpClient(withInterceptorsFromDi()),
     
     importProvidersFrom(BrowserModule),
     
-    // Register the MSAL Interceptor into Angular's HTTP pipeline
+    //  Explicitly link MSAL interceptor into Angular's modern DI scope pipeline
     {
       provide: HTTP_INTERCEPTORS,
       useClass: MsalInterceptor,

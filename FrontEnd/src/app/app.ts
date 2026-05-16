@@ -1,16 +1,3 @@
-// import { Component, signal } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
-
-// @Component({
-//   selector: 'app-root',
-//   imports: [RouterOutlet],
-//   templateUrl: './app.html',
-//   styleUrl: './app.scss'
-// })
-// export class App {
-//   protected readonly title = signal('LuftBorn');
-// }
-
 
 import { Component, Inject, OnInit, OnDestroy, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -77,44 +64,6 @@ export class App implements OnInit, OnDestroy {
   }
 
 
-//   ngOnInit(): void {
-//     // ✅ FIX: Explicitly handle the redirect resolution payload
-//     this.authService.handleRedirectObservable()
-//       .pipe(takeUntil(this._destroying$))
-//       .subscribe({
-//         next: (response) => {
-//           if (response && response.account) {
-//             // Set the account immediately so guards know you are logged in
-//             this.authService.instance.setActiveAccount(response.account);
-//             this.updateAuthenticationStatus();
-//           }
-//         },
-//         error: (error) => {
-//           console.error('MSAL Redirect Error:', error);
-//         }
-//       });
-
-//     // 1. Monitors cross-tab state changes natively using the unified v5 Event Type
-//     this.msalBroadcastService.msalSubject$
-//       .pipe(
-//   filter((msg: EventMessage) => msg.eventType === EventType.ACTIVE_ACCOUNT_CHANGED),
-//         takeUntil(this._destroying$)
-//       )
-//       .subscribe(() => {
-//         this.updateAuthenticationStatus();
-//       });
-
-//     //  Syncs local layout visibility whenever authentication cycles settle down
-//     this.msalBroadcastService.inProgress$
-//       .pipe(
-//         filter((status: InteractionStatus) => status === InteractionStatus.None),
-//         takeUntil(this._destroying$)
-//       )
-//       .subscribe(() => {
-//         this.checkAndSetActiveAccount();
-//         this.updateAuthenticationStatus();
-//       });
-//   }
 
   private checkAndSetActiveAccount() {
     let activeAccount = this.authService.instance.getActiveAccount();

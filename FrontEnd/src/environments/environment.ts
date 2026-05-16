@@ -1,5 +1,11 @@
 
+// this is for the http
 const localApiUrl = 'http://localhost:5047';
+
+// for the https 
+// const localApiUrl = 'https://localhost:7225';
+
+
 
 export const environment = {
   production: false,
@@ -25,10 +31,8 @@ export const environment = {
         'https://HeshamEcommerce.onmicrosoft.com/Ecommerce/access_as_user'
       ],
       apiEndpointUrls: [ 
-        `${localApiUrl}/Product`, 
-        `${localApiUrl}/Category`
-      ]
-    },
+          localApiUrl
+      ]    },
     cacheTimeInMinutes: 30,
   }
 };
